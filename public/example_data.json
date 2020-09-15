@@ -1,0 +1,7 @@
+[
+  {id: '1', name: 'my example item 1', description: 'example item description 1', date: '2020-09-15'},
+  {id: '2', name: 'some example item 2', description: 'example item description 2', date: '2020-09-17'},
+  {id: '3', name: 'an example item 3', description: 'example item description 3', date: '2020-09-10'},
+  {id: '4', name: 'this example item 4', description: 'example item description 4', date: '2020-09-11'},
+  {id: '5', name: 'example item 5', description: 'example item description 5', date: '2020-09-13'},
+]
