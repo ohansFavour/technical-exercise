@@ -1,3 +1,5 @@
+This file can be viewed @ https://gist.github.com/bnorton/c90947f6525ec0585524137a7fa947c4
+
 #### Why Engineer @ Chameleon:
 
 We're a small team who does a lot with a little -- we're profitable, we have > 300 customers, a global monthly active user base of > 4 million and multiple times per second someone, somewhere in the world sees a Chameleon experience.
@@ -41,3 +43,10 @@ Above the list of users we should see a summary of some the data in the table
 
 This runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+
+#### To submit:
+
+- Zip this project and send it back via email
+- Send us a link (Drive, Dropbox etc.)
+- Create a new GitHub repo and add bnorton and b3nj4m as collaborators (preferred)
