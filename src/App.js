@@ -1,26 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useContext } from "react";
 
-function App() {
+// components
+import Header from "./components/Header/Header";
+import Spinner from "./components/Spinner/Spinner";
+import Summary from "./components/Summary/Summary";
+import Users from "./components/Users/Users";
+
+// context
+import { UsersContext } from "./context/store";
+
+// Styled-components
+import StyledApp, { StyledAppError } from "./styledApp";
+
+const App = () => {
+  const {
+    getUsers,
+    state: { isFetching, error },
+  } = useContext(UsersContext);
+
+  useEffect(() => {
+    getUsers();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Hello world
-        </a>
-      </header>
-    </div>
+    <StyledApp>
+      <Header />
+
+      {/* App fetching data */}
+      {isFetching ? (
+        <Spinner />
+      ) : (
+        <>
+          <Summary />
+          <Users />
+        </>
+      )}
+
+      {/* When error occurs */}
+      {error ? (
+        <StyledAppError>
+          {error}, please check your connection and reload page
+        </StyledAppError>
+      ) : null}
+    </StyledApp>
   );
-}
+};
 
 export default App;
