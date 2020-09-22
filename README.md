@@ -1,7 +1,7 @@
 Chameleon Frontend Developer Technical Exercise
 
-Name: Favour Ohanekwu
-Email: fohanekwu@gmail.com
+Name: <strong>Favour Ohanekwu</strong> <br/>
+Email: <strong>fohanekwu@gmail.com</strong>
 
 <h3>Technologies used</h3>
 
@@ -11,8 +11,8 @@ Email: fohanekwu@gmail.com
 
 #### To begin:
 
-`node -v` should be 12 or greater
-`npm install`
+`node -v` should be 12 or greater <br/>
+`npm install` <br/>
 `npm run start`
 
 This runs the app in the development mode.<br />
