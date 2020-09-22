@@ -10,18 +10,19 @@ const {
 
 // Reducer
 const usersReducer = (state = initialState, action) => {
-  switch (action.type) {
+  const { type, payload } = action;
+  switch (type) {
     case IS_FETCHING_USERS:
       return { ...state, isFetching: true, error: null };
 
     case FETCH_USERS_FAILURE:
-      return { ...state, isFetching: false, error: action.payload };
+      return { ...state, isFetching: false, error: payload };
 
     case FETCH_USERS_SUCCESS:
       return {
         ...state,
         isFetching: false,
-        users: action.payload,
+        users: payload,
         error: null,
       };
 

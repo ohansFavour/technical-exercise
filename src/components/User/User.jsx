@@ -57,7 +57,7 @@ const User = ({ item }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <StyledUser>
+      <StyledUser data-testid="user">
         <StyledImage
           src={cached_avatar}
           alt={`${name}`}

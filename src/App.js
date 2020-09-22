@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from "react";
 
 // components
 import Header from "./components/Header/Header";
-import Spinner from "./components/Spinner/Spinner";
+import LoadingBubble from "./components/LoadingBubble/LoadingBubble";
 import Summary from "./components/Summary/Summary";
 import Users from "./components/Users/Users";
 
@@ -20,7 +20,7 @@ const App = () => {
 
   useEffect(() => {
     getUsers();
-  }, []);
+  }, [getUsers]);
 
   return (
     <StyledApp>
@@ -28,7 +28,7 @@ const App = () => {
 
       {/* App fetching data */}
       {isFetching ? (
-        <Spinner />
+        <LoadingBubble />
       ) : (
         <>
           <Summary />

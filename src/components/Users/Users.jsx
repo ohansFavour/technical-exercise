@@ -17,7 +17,7 @@ const Users = () => {
   return (
     <StyledUsers>
       <StyledTitle>List</StyledTitle>
-      <StyledList>
+      <StyledList data-testid="users-list">
         {users && users.map((el) => <User key={el.id} item={el} />)}
       </StyledList>
     </StyledUsers>

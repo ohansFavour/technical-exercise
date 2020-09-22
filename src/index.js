@@ -5,10 +5,10 @@ import App from "./App";
 import { UsersProvider } from "./context/store";
 
 ReactDOM.render(
-  <UsersProvider>
-    <React.StrictMode>
+  <React.StrictMode>
+    <UsersProvider>
       <App />
-    </React.StrictMode>
-  </UsersProvider>,
+    </UsersProvider>
+  </React.StrictMode>,
   document.getElementById("root")
 );

@@ -1,16 +1,22 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render, screen } from "@testing-library/react";
 
 // component
+
 import Header from "./Header";
 
-describe("Header Component", () => {
-  let wrapper;
+describe("Header component", () => {
   beforeEach(() => {
-    wrapper = shallow(<Header />);
+    render(<Header />);
   });
-
-  it("renders the heading", () => {
-    expect(wrapper.contains("USERS CATALOGUE")).toEqual(true);
+  test("renders Title", () => {
+    expect(screen.getByText("USERS CATALOGUE")).toBeInTheDocument();
+  });
+  test("renders Description", () => {
+    expect(
+      screen.getByText(
+        /This page shows a list of the current users available in our system/
+      )
+    ).toBeInTheDocument();
   });
 });

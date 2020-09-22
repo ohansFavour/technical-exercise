@@ -21,12 +21,15 @@ const Summary = () => {
   useEffect(() => {
     if (users) {
       const summaryObj = summaryStat(users);
-      setSummaryData({ ...summaryData, ...summaryObj });
+      setSummaryData((previousData) => ({
+        ...previousData,
+        ...summaryObj,
+      }));
     }
   }, [users]);
 
   return (
-    <StyledSummary>
+    <StyledSummary data-testid="Summary">
       <StyledTitle>Summary</StyledTitle>
       <StyledList>
         {Object.values(summaryData).map((el, index) => (

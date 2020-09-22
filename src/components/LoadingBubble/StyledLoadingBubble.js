@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledSpinner = styled.div`
+const StyledLoadingBubble = styled.div`
   width: 40px;
   height: 40px;
   margin: 100px auto;
@@ -33,4 +33,4 @@ const StyledSpinner = styled.div`
   }
 `;
 
-export default StyledSpinner;
+export default StyledLoadingBubble;
