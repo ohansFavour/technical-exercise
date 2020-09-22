@@ -36,13 +36,13 @@ describe("App Component", () => {
       </UsersProvider>
     );
     // Before users data
-    expect(screen.getByText("USERS CATALOGUE")).toBeInTheDocument();
-    expect(screen.queryByText("Summary")).toBeNull();
-    expect(screen.queryByText("List")).toBeNull();
+    expect(screen.getByText("USERS CATALOGUE")).toBeInTheDocument(); // renders the heading
+    expect(screen.queryByText("Summary")).toBeNull(); // doesn't render the Summary ( No users yet)
+    expect(screen.queryByText("List")).toBeNull(); // doesn't render the List ( No users yet)
 
     // After users data
-    expect(await screen.findByText("List")).toBeInTheDocument();
-    expect(await screen.findByText("Summary")).toBeInTheDocument();
+    expect(await screen.findByText("List")).toBeInTheDocument(); //renders the List ( Users fetched)
+    expect(await screen.findByText("Summary")).toBeInTheDocument(); // renders the Summary ( Users fetched)
 
     // clear
     global.fetch.mockClear();
@@ -59,6 +59,6 @@ describe("App Component", () => {
     );
     expect(
       await screen.findByText(/please check your connection and reload page/)
-    ).toBeInTheDocument();
+    ).toBeInTheDocument(); // Error message is displayed
   });
 });
