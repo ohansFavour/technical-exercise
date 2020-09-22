@@ -26,22 +26,24 @@ const App = () => {
     <StyledApp>
       <Header />
 
-      {/* App fetching data */}
-      {isFetching ? (
-        <LoadingBubble />
-      ) : (
-        <>
-          <Summary />
-          <Users />
-        </>
-      )}
-
       {/* When error occurs */}
       {error ? (
         <StyledAppError>
           {error}, please check your connection and reload page
         </StyledAppError>
-      ) : null}
+      ) : (
+        <>
+          {/* App fetching data */}
+          {isFetching ? (
+            <LoadingBubble />
+          ) : (
+            <>
+              <Summary />
+              <Users />
+            </>
+          )}
+        </>
+      )}
     </StyledApp>
   );
 };
